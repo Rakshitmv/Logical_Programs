@@ -14,7 +14,7 @@ namespace LogicalProblems
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter 1: Gambler\n" + "Enter 2: Generate coupons\n");
+                Console.WriteLine("Enter 1: Gambler\n" +  "Enter 2: Generate coupons\n" + "Enter 3: Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -23,6 +23,10 @@ namespace LogicalProblems
                         gambler.GamblerSimulation();
                         break;
                     case 2:
+                        GenerateCoupons coupon= new GenerateCoupons();
+                        coupon.Coupons();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                     default:
